@@ -1,0 +1,265 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburger{
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #000, #666); /* Gradient background */
+    color: white; /* Set text color to white */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px; 
+}
+
+/* Navbar Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar ul li a:hover {
+    background-color: #777;  
+    transform: scale(1.2);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Terms and Conditions Container */
+.terms-container {
+    max-width: 800px;
+    margin: 30px auto; 
+    padding: 30px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    margin-bottom: 25px; 
+    font-size: 36px;
+    color: #fff; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); 
+}
+
+/* Paragraph Styles */
+p {
+    margin-bottom: 20px; 
+    color: #ddd; 
+    line-height: 1.6; 
+    font-size: 16px; 
+    transition: color 0.3s ease; 
+}
+
+/* Strong Text Styles */
+strong {
+    color: #fff;
+}
+
+/* Hover Effect on Paragraphs */
+p:hover {
+    color: #eee; 
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Responsive styling for tablet viewports */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    header {
+        background-color: black; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+    }
+
+    /* Center the logo */
+    .logo {
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 80px; 
+        height: auto; 
+    }
+
+    /* Move the navigation bar below the logo */
+    .navbar {
+        display: flex;
+        justify-content: center; 
+        margin-top: 10px; 
+    }
+
+    .navbar ul {
+        display: flex; 
+        list-style: none;
+        padding: 0; 
+    }
+
+    .navbar li {
+        margin: 0 20px; 
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white; 
+        background-color: #666; 
+        padding: 10px 15px; 
+        border-radius: 20px; 
+        transition: background-color 0.3s ease; 
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); 
+    }
+
+    /* Terms and Conditions Container */
+    .terms-container {
+        padding: 25px; 
+    }
+
+    h1 {
+        font-size: 32px; 
+    }
+
+    p {
+        font-size: 15px; 
+    }
+}
+/* Responsive styling for mobile viewports */
+@media screen and (max-width: 599px) {
+    /* Header Section */
+    header {
+        background-color: black; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 20px;
+        z-index: 1000; 
+    }
+
+    /* Logo Styles for Mobile */
+    .logo img {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    /* Navbar Styles for Mobile */
+    .navbar {
+        width: 100%; 
+        display: none; 
+        flex-direction: column; 
+        text-align: center; 
+        position: absolute; 
+        top: 60px; 
+        right: 0; 
+        z-index: 9; 
+        background-color: white; 
+        padding: 10px 0; 
+    }
+
+    .navbar ul {
+        flex-direction: column; 
+        width: 100%; 
+        
+    }
+
+    .navbar ul li {
+        margin: 10px 0; 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5); 
+    }
+
+    .navbar ul li a {
+        padding: 15px; 
+        color: black; 
+        background-color: transparent;
+        border-radius: 8px; 
+        text-align: center; 
+        width: 100%; 
+        display: block; 
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+
+    
+    .navbar.active {
+        display: flex; 
+    }
+
+    /* Hamburger button styles */
+    .hamburger {
+        display: block; 
+        background: transparent; 
+        border: none; 
+        color: white; 
+        font-size: 30px; 
+        cursor: pointer; 
+    }
+}

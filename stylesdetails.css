@@ -1,0 +1,544 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #000, #666);
+    color: white;
+    padding-top: 100px;
+}
+
+/* Header Section */
+.hamburger{
+    display: none;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    z-index: 1000;
+}
+
+
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px; 
+}
+
+.search-bar {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Navbar Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar ul li a:hover {
+    background-color: #777;  
+    transform: scale(1.2);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    transform-origin: center;
+    background-color: rgba(255, 255, 255, 0.4); 
+    display: inline-block;
+    transition: background-color 0.3s ease; 
+}
+
+/* Main Content Section */
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+/* Car Section */
+.car-info, .registration-form {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%; 
+    max-width: 800px; 
+}
+
+.car-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.car-gallery {
+    display: flex;
+    flex-direction: column; 
+}
+
+.car-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-thumbnails {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.gallery-thumbnails img {
+    width: 30%; 
+    border-radius: 5px;
+}
+
+/* Price Section */
+.price {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* Car Details Table */
+.car-details {
+    margin-top: 20px; 
+}
+
+.car-details h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.car-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.car-details td {
+    padding: 10px;
+    border: 1px solid #555; 
+}
+
+/* Alternate row colors */
+.car-details tr:nth-child(even) td {
+    background-color: #BDBDBD; 
+}
+
+.car-details tr:nth-child(odd) td {
+    background-color: #D9D9D9; 
+}
+
+.def {
+    font-weight: bold; 
+}
+
+tr{
+    color: #000;
+}
+
+/* Registration Form */
+.registration-form {
+    display: flex;
+    flex-direction: column; 
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+}
+
+.registration-form fieldset {
+    border: 1px solid #ccc; 
+    padding: 15px;
+    border-radius: 8px; 
+    margin-bottom: 15px; 
+}
+
+.registration-form label {
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.registration-form input, .registration-form textarea {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+/* Reset Button */
+.reset-button {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 15px 32px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; 
+    margin-left: 10px; 
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+.reset-button:hover {
+    background-color: #d32f2f; 
+}
+    
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    /* Center the header content vertically and stack */
+    header {
+        background-color: black; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+    }
+
+    /* Center the logo and make it larger */
+    .logo {
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .logo img {
+        width: 80px; 
+        height: auto; 
+    }
+
+    /* Ensure the navbar is below the logo and centered */
+    .navbar {
+        width: 100%; 
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center; 
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap; 
+    }
+
+    .navbar li {
+        margin: 10px 20px; 
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white; 
+        background-color: #666; 
+        padding: 10px 15px;
+        border-radius: 20px; 
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); 
+    }
+
+    /* Optional: Adjust search bar width for tablet view */
+    .search-bar {
+        max-width: 80%; 
+        margin-bottom: 15px; 
+    }
+
+    /* Main Content Section */
+    main {
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Car Section */
+    .car-info, .registration-form {
+        width: 90%; 
+        height: 50%;
+        max-width: 600px; 
+        margin-bottom: 20px; 
+        
+        
+    }
+    .car-info{
+        margin-top: 20%;
+    }
+    
+
+    .car-gallery {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .gallery-thumbnails img {
+        width: 45%; /* Adjust thumbnail size for better visibility */
+        max-width: 180px;
+    }
+
+    /* Car Details Table */
+    .car-details table {
+        font-size: 14px; 
+    }
+
+    .car-listing {
+        width: 90%; 
+        margin: 0 auto; 
+        padding: 20px; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    .car-title {
+        font-size: 1.5rem; 
+        color: #333; 
+    }
+
+    .car-description {
+        font-size: 1.1rem; 
+        line-height: 1.5;
+    }
+
+    /* Additional adjustments */
+    .car-image {
+        width: 100%; 
+        height: auto; 
+        max-height: 300px; 
+    }
+
+    /* Registration Form */
+    .registration-form input, .registration-form textarea {
+        font-size: 14px; 
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+
+    footer .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 599px) {
+    .search-bar {
+        display: none; 
+    }
+
+    .hamburger {
+        display: block; 
+        background: transparent; 
+        border: none; 
+        color: white; 
+        font-size: 30px; 
+        cursor: pointer; 
+        position: absolute; 
+        right: 20px; 
+        top: 20px; 
+    }
+
+    /* Header Section */
+    header {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 20px;
+        background-color: black; 
+        z-index: 1000; 
+    }
+
+    /* Stack navbar items vertically and center them */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; 
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0; 
+        width: 100%; 
+        z-index: 9; 
+        padding: 10px 0; 
+    }
+
+    /* Show the menu when the class 'active' is added */
+    .navbar.active ul {
+        display: flex; 
+    }
+
+    /* Car gallery for mobile devices */
+    .car-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure gallery images fit within the phone screen */
+    .car-gallery img {
+        width: 100%;
+        height: auto; 
+        max-width: 100%; 
+        border-radius: 10px;
+        margin-bottom: 10px; 
+    }
+
+    /* Thumbnails for the gallery */
+    .gallery-thumbnails {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; 
+    }
+
+    .gallery-thumbnails img {
+        width: 32%; 
+        height: auto;
+        max-width: 100px;
+        border-radius: 5px;
+    }
+
+    /* Main content section adjustment for mobile */
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Car info and registration form responsiveness */
+    .car-info,
+    .registration-form {
+        width: 100%; 
+        max-width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    /* Make sure the car details table is also mobile-friendly */
+    .car-details table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Adjust car image inside listings for mobile */
+    .car-image {
+        width: 100%; 
+        height: auto; 
+        max-height: 250px; 
+    }
+
+    /* Adjust header for mobile view */
+    .logo img {
+        width: 60px; 
+        height: 60px;
+    }
+
+    .navbar {
+        width: 100%; 
+    }
+
+    .navbar ul li {
+        margin: 10px 0; 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar ul li a {
+        padding: 15px; 
+        color: black; 
+        background-color: transparent; 
+        border-radius: 8px; 
+        text-align: center; 
+        width: 100%; 
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+}

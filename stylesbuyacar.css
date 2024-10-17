@@ -1,0 +1,500 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hamburger {
+    display: none; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to top, #000, #666);
+    color: white;
+    padding-top: 80px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.search-bar {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    transform-origin: center;
+    background-color: rgba(255, 255, 255, 0.4); 
+    display: inline-block;
+    transition: background-color 0.3s ease; 
+}
+
+.navbar ul li a:hover {
+    background-color: #777;  
+    transform: scale(1.2);
+}
+
+/* Hero Image Section */
+.bgforbuyacar {
+    position: relative;
+    height: 400px;
+    background: url('images/bg.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text-left {
+    position: relative;
+    padding: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    left: 2%;
+    top: 10%;
+}
+
+/* Car Grid Section */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-item {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.car-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #777;
+}
+
+.car-item h2 {
+    padding: 10px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.car-item:hover {
+    transform: scale(1.1); 
+}
+
+/* Awareness Section */
+.awareness-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    text-align: center;
+}
+
+.awareness-section h2 {
+    font-size: 24px;
+}
+
+.awareness-section p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Video Section */
+.video-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 24px;
+}
+
+.video-section video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Latest News Section */
+.latest-news-section {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.latest-news-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.latest-news-section ul {
+    list-style: none;
+}
+
+.latest-news-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    
+    header {
+        background-color: black; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+    }
+
+    /* Center the logo and make it larger */
+    .logo {
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto; 
+    }
+
+    /* Ensure the navbar is below the logo and centered */
+    .navbar {
+        width: 100%; 
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center; 
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap; 
+    }
+
+    .navbar li {
+        margin: 10px 20px; 
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white; 
+        background-color: #666; 
+        padding: 10px 15px; 
+        border-radius: 20px; 
+        transition: background-color 0.3s ease; 
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); 
+    }
+
+ 
+    .search-bar {
+        max-width: 80%; 
+        margin-bottom: 15px; 
+    }
+
+    .hero-text-left {
+        position: absolute; 
+        top: 65%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        padding: 20px; 
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center; 
+        color: white; 
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .awareness-section, .video-section, .latest-news-section {
+        padding: 20px; 
+    }
+
+    .awareness-section h2, 
+    .video-section h2, 
+    .latest-news-section h2 {
+        font-size: 20px;
+    }
+
+    .awareness-section p,
+    .latest-news-section ul li {
+        font-size: 14px; 
+    }
+
+    footer {
+        padding: 15px; 
+    }
+
+    footer p {
+        font-size: 12px; 
+    }
+}
+
+/* Mobile Viewport */
+@media screen and (max-width: 599px) {
+    header {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 20px;
+        background-color: black; 
+        z-index: 1000;
+    }
+
+   
+
+    .logo img {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .hamburger {
+        display: block; 
+        background: transparent; 
+        border: none; 
+        color: white; 
+        font-size: 30px; 
+        cursor: pointer; 
+    }
+
+    .navbar {
+        display: none; 
+        background-color: transparent;
+    }
+
+    .navbar.active {
+        display: flex; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 70px; 
+        left: 0;
+        width: 100%; 
+        background-color: white; 
+        z-index: 999; 
+        border-top: 2px solid #ddd; 
+    }
+
+    .navbar ul {
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%; 
+    }
+
+    .navbar ul li {
+        margin: 10px 0; 
+        
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5); 
+    }
+
+
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: black; 
+        padding: 15px 0; 
+        display: block; 
+        width: 100%; 
+        background-color: transparent;
+    }
+
+    .search-bar {
+        display: none; 
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    .hero-text-left {
+        font-size: 22px;
+        padding: 10px; 
+    }
+
+    .awareness-section h2, 
+    .video-section h2, 
+    .latest-news-section h2 {
+        font-size: 18px; 
+    }
+
+    .awareness-section p,
+    .latest-news-section ul li {
+        font-size: 12px; 
+    }
+}
+@media print {
+    
+    header,
+    .navbar,
+    .search-bar,
+    .hamburger {
+        display: none !important; 
+    }
+
+    /* Set body style for print */
+    body {
+        color: #000; 
+        background: none; 
+        padding: 0; 
+    }
+
+    /* Style the hero section for print */
+    .hero-section {
+        display: none; 
+    }
+
+    /* Style car grid items for print */
+    .car-grid {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: flex-start; 
+        margin: 0; 
+    }
+
+    .car-item {
+        width: calc(25% - 10px); 
+        page-break-inside: avoid; 
+        margin: 5px; 
+        border: 1px solid #ccc; 
+        padding: 5px; 
+        background-color: #fff; 
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+    .car-item img {
+        height: auto; 
+        max-width: 100%; 
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    /* Style awareness, video, and news sections */
+    .awareness-section,
+    .video-section,
+    .latest-news-section {
+        background: none; 
+        color: #000; 
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        margin: 20px 0; 
+    }
+
+    .awareness-section h2,
+    .video-section h2,
+    .latest-news-section h2 {
+        font-size: 16px; 
+    }
+
+    /* Footer styles for print */
+    footer {
+        page-break-after: always; 
+        border-top: 1px solid #ccc; 
+        padding-top: 10px; 
+        margin-top: 20px; 
+    }
+
+    /* Prevent header and footer duplication on pages */
+    @page {
+        margin: 10mm; 
+    }
+}
+
